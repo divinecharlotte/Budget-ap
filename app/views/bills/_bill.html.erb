@@ -1,10 +1,6 @@
 <div class="container-fluid">
 <div class="bills">
-<%
-=begin%>
- <%= @bills %> 
-<%
-=end%>
+
 
  <% @bills.order('id DESC').each do |bill| %>
  
