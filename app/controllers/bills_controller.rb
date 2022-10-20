@@ -1,5 +1,5 @@
 class BillsController < ApplicationController
-  before_action :set_bill, only: %i[ show edit update destroy ]
+  before_action :set_bill, only: %i[show edit update destroy]
 
   # GET /bills or /bills.json
   def index
@@ -8,8 +8,7 @@ class BillsController < ApplicationController
   end
 
   # GET /bills/1 or /bills/1.json
-  def show
-  end
+  def show; end
 
   # GET /bills/new
   def new
@@ -17,8 +16,7 @@ class BillsController < ApplicationController
   end
 
   # GET /bills/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /bills or /bills.json
   def create
@@ -26,7 +24,7 @@ class BillsController < ApplicationController
 
     respond_to do |format|
       if @bill.save
-        format.html { redirect_to group_bills_path, notice: "Bill was successfully created." }
+        format.html { redirect_to group_bills_path, notice: 'Bill was successfully created.' }
         format.json { render :show, status: :created, location: @bill }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +37,7 @@ class BillsController < ApplicationController
   def update
     respond_to do |format|
       if @bill.update(bill_params)
-        format.html { redirect_to bill_url(@bill), notice: "Bill was successfully updated." }
+        format.html { redirect_to bill_url(@bill), notice: 'Bill was successfully updated.' }
         format.json { render :show, status: :ok, location: @bill }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,19 +51,20 @@ class BillsController < ApplicationController
     @bill.destroy
 
     respond_to do |format|
-      format.html { redirect_to bills_url, notice: "Bill was successfully destroyed." }
+      format.html { redirect_to bills_url, notice: 'Bill was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_bill
-      @bill = Bill.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def bill_params
-      params.require(:bill).permit(:name, :amount, :author_id, :group_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_bill
+    @bill = Bill.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def bill_params
+    params.require(:bill).permit(:name, :amount, :author_id, :group_id)
+  end
 end

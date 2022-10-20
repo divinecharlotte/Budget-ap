@@ -1,24 +1,9 @@
 <p style="color: green"><%= notice %></p>
-<h1 class="content-header">CATEGORIES</h1>
- <%
-=begin%>
- <%= button_to "Log out", destroy_user_session_path, method: :delete %> 
-<%
-=end%>
+<h1 class="bg-primary w-100 position-fixed top-0 ">CATEGORIES</h1>
 <div id="groups">
   <% @groups.each do |group| %>
-    <%
-=begin%>
- <%= link_to group_path(group) do %> 
-<%
-=end%>
       <%= render group %>
     <% end %>
-  <%
-=begin%>
- <% end %> 
-<%
-=end%>
 </div>
  <div class="bg-green p-3 w-100 position-fixed bottom-0">
   <%= link_to "Add a New category", new_group_path, class: 'btn bg-green fw-bold col-12 text-uppercase' %>

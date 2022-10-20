@@ -1,6 +1,4 @@
 class Bill < ApplicationRecord
-    belongs_to :author, class_name: 'User'
-    belongs_to :group
-
-
+  belongs_to :author, class_name: 'User'
+  belongs_to :group
 end

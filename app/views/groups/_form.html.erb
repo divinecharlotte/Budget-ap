@@ -14,24 +14,22 @@
 
   <div>
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: 'form-control', placeholder: 'Enter name' %>
   </div>
+
+
   <%
 =begin%>
  <div>
-    <% form.label :user_id, style: "display: block" %>
-   <%= form.number_field :user_id, id: :group_user_id, class:"form-control", value: current_user.id, type: :hidden %>
-
+    <%= form.label :icon, style: "display: block" %>
+    <%= form.text_field :icon, class: 'form-control', placeholder: 'Enter name' %>
   </div> 
 <%
 =end%>
-
-
-  <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
+<div class="select-field">
+   <%= form.select :icon, @group.icons.map { |icon| [icon['name'], icon['url']] },
+   { :include_blank => 'Choose category icon' }, :required => true, class:'select-icon' %>
   </div>
-
   <div>
     <%= form.submit "Save Category", class: 'btn btn-sm bg-blue col-12 mt-3' %>
   </div>

@@ -1,4 +1,5 @@
 <p style="color: green"><%= notice %></p>
+<h1 class="bg-primary w-100 position-fixed top-0 ">TRANSACTIONS</h1>
 <div class="px-3 d-flex justify-content-end mb-3">
   Total: $<%= @group.bills.inject(0){ |sum, bill| sum + bill.amount.to_i } %>
 </div>
@@ -6,21 +7,7 @@
  <%= render @bills %> 
 
 
-<div class="container-fluid d-flex mb-3">
-
-  <%= link_to "Edit this group", edit_group_path(@group), class: 'mx-1' %> |
-  <%= link_to "Back to groups", groups_path, class: 'mx-1' %>
-
-  | <%= button_to "Delete", @group, method: :delete, class: 'mx-1 border-0 text-primary' %>
-
-</div>
-<%
-=begin%>
- 
-<%= render 'bill', bills: @group.bills %> 
-<%
-=end%>
-
 <div class="bg-green p-3 w-100 position-fixed bottom-0">
-  <%= link_to "Add a New bill", new_group_bill_path(@group.id), class: 'btn bg-green fw-bold col-12 text-uppercase' %>
+<%= link_to "go back to categories", groups_path, class: 'btn  fw-bold col-12 text-uppercase' %> 
+  <%= link_to "Add a New transaction", new_group_bill_path(@group.id), class: 'btn bg-green fw-bold col-12 text-uppercase' %>
 </div>

@@ -21,9 +21,6 @@
     <%= form.hidden_field :author_id, {value: current_user.id} %>
   </div>
 
-  <div class="form-group">
-    <%= form.text_area :description, class: 'form-control my-3', placeholder: 'Add description' %>
-  </div>
 
   <div class="form-group">
     <%= form.submit 'Save Bill', class: 'btn btn-primary btn-sm bg-blue col-12' %>

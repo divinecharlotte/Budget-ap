@@ -1,15 +1,115 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('http://fonts.cdnfonts.com/css/proxima-nova-2');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:root {
+  --blue: #3778c2;
+  --green: #5fb523;
+  --gray: #434b54;
+  --white: #f1f3f2;
+  --lightgray: #f1f3f2;
+  --darkgray: #ddd;
+}
+
+body {
+  font-family: 'Proxima Nova', sans-serif !important;
+  background-color: var(--lightgray);
+}
+
+h1 {
+  text-align: center;
+}
+
+ol,
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bg-blue,
+.bg-green {
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-green {
+  background-color: #5fb523;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.btn-sm {
+  font-size: medium;
+}
+
+.bg-green .btn {
+  border: 2px solid var(--white);
+}
+
+.select-field {
+  background-color: #fff;
+  border-bottom: 1px #f1f1f1 solid;
+  width: calc(100% - 30px);
+  padding: 0 15px;
+}
+
+.select-icon {
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: #434b5480;
+  cursor: pointer;
+}
+
+.select-icon option {
+  width: 100%;
+  background-color: #fff;
+}
+
+.select-icon option:not(:first-child) {
+  color: #434b54;
+}
+
+form .form-group .form-control {
+  border-radius: 0;
+  border: none;
+  padding-left: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.row-25 {
+  width: 25%;
+}
+
+.row-75 {
+  width: 75%;
+}
+
+.bills a,
+.box-card {
+  color: var(--gray);
+}
+
+.box-card {
+  border: 1px solid var(--darkgray);
+  box-shadow: 2px 2px 5px var(--darkgray);
+}

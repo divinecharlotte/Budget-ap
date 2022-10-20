@@ -1,4 +1,4 @@
 class GroupBill < ApplicationRecord
-    belongs_to :group
-    belongs_to :bill
+  belongs_to :group
+  belongs_to :bill
 end
