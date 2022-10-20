@@ -1,7 +1,13 @@
 <div class="container-fluid">
 <div class="bills">
-  <% @bills.order('id DESC').each do |bill| %>
-    <%= link_to group_bill_path(bill.group_id, bill) do %>
+<%
+=begin%>
+ <%= @bills %> 
+<%
+=end%>
+
+ <% @bills.order('id DESC').each do |bill| %>
+ 
      <div class="mb-3">
       <div class="container-flud mx-2 px-2 bg-white border-bottom">
         <p class="pt-2"><%= bill.name %></p>
@@ -16,6 +22,7 @@
       </div>
       </div>
       <% end %>
-  <% end %>
+  
+
 </div>
 </div>
