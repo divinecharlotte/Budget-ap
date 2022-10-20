@@ -1,24 +1,63 @@
-# README
+## BUDGET APP
+>Is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## lIVE DEMO
 
-Things you may want to cover:
+## Project documentation
+[Documentation video](https://www.loom.com/share/3e03c990ef2c4170ac7c5b5b0da8fbcc)
 
-* Ruby version
+## Built with
+- Ruby
+- Rails
+- PostgresQL
 
-* System dependencies
+## Getting Started
 
-* Configuration
+### Prerequisites
+You need Ruby v3+, Rails v7+ and Postgresql installed on your machine.
 
-* Database creation
+### Setup
 
-* Database initialization
+- Clone this repo locally using git in the command line with the following command
+```ruby
+> https://github.com/divinecharlotte/budget-ap.git
+```
+- Alternatively, you can just download the complete zip file and extract the folder in your directory
 
-* How to run the test suite
+### Usage
 
-* Services (job queues, cache servers, search engines, etc.)
+In the project directory,open terminal and run this command:
 
-* Deployment instructions
+```ruby
+> rails server
+```
 
-* ...
+### Testing
+This command will run all the tests in your terminal:
+
+  ```ruby
+  > rspec spec
+  ```
+  
+## Author
+
+👤 **Charlotte Divine**
+
+- GitHub: [divinecharlotte](https://github.com/divinecharlotte)
+- LinkedIn: [charlotte-divine](https://www.linkedin.com/in/charlotte-divine-dusenge/)
+
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+Much appreciated to [Gregoire Vella](https://www.behance.net/gregoirevella). the owner of the design.
