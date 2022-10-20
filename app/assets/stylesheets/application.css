@@ -65,7 +65,8 @@ a {
 .select-field {
   background-color: #fff;
   border-bottom: 1px #f1f1f1 solid;
-  width: calc(100% - 30px);
+  border-radius: 8px;
+  margin-top: 20px;
   padding: 0 15px;
 }
 

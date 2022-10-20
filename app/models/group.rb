@@ -3,7 +3,6 @@ class Group < ApplicationRecord
   has_many :bills, dependent: :destroy
   belongs_to :user
 
-  
   validates :name, presence: true
   validates :icon, presence: true
 
