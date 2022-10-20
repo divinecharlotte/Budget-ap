@@ -1,0 +1,9 @@
+<h1 class="bg-green p-3 w-100 position-fixed top-0 mb-5">CATEGORIES</h1>
+<%= render @bill %>
+
+<div>
+  <%= link_to "Edit this bill", edit_bill_path(@bill) %> |
+  <%= link_to "Back to bills", bills_path %>
+
+  <%= button_to "Destroy this bill", @bill, method: :delete %>
+</div>
