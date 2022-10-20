@@ -1,0 +1,20 @@
+
+
+<h1>Bills</h1>
+
+<div id="bills">
+  <% @bills.each do |bill| %>
+    <%= render bill %>
+    <p>
+
+
+    </p>
+  <% end %>
+</div>
+
+
+
+ <%= link_to "go back to categories", groups_path %>  
+ <%= link_to "add new transaction", new_group_bill_path %>  
+
+
