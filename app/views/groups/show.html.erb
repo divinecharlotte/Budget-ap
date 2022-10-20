@@ -1,8 +1,13 @@
 <p style="color: green"><%= notice %></p>
 <h1 class="bg-primary w-100 position-fixed top-0 ">TRANSACTIONS</h1>
-<div class="px-3 d-flex justify-content-end mb-3">
+<%= render @group%>
+<%
+=begin%>
+ <div class="px-3 d-flex justify-content-end mb-3">
   Total: $<%= @group.bills.inject(0){ |sum, bill| sum + bill.amount.to_i } %>
-</div>
+</div> 
+<%
+=end%>
 
  <%= render @bills %> 
 
