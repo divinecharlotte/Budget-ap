@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
-  before_action :set_group, only: %i[show edit update destroy]
-
+  # before_action :set_group, only: %i[show edit update destroy]
+  before_action :authenticate_user!
   # GET /groups or /groups.json
   def index
     @groups = Group.where(user_id: current_user.id)

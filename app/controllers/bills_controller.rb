@@ -1,4 +1,5 @@
 class BillsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_bill, only: %i[show edit update destroy]
 
   # GET /bills or /bills.json
