@@ -2,9 +2,7 @@
 >Is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what
 
 ## lIVE DEMO
-
-## Project documentation
-[Documentation video](https://www.loom.com/share/3e03c990ef2c4170ac7c5b5b0da8fbcc)
+[budget app](https://pacific-springs-14772.herokuapp.com/)
 
 ## Built with
 - Ruby
