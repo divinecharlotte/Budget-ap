@@ -1,0 +1,16 @@
+<h1 class="bg-primary w-100 position-fixed top-0 ">TRANSACTIONS</h1>
+<%= render @group%>
+<div id="bills">
+
+    <%= render "bill" %>
+   
+</div>
+
+
+<div class="bg-green p-3 w-100 position-fixed bottom-0">
+
+ <%= link_to "go back to categories", groups_path, class: 'btn  fw-bold col-12 text-uppercase' %> 
+
+
+  <%= link_to "Add a New transaction", new_group_bill_path(@group.id), class: 'btn bg-green fw-bold col-12 text-uppercase' %>
+</div>

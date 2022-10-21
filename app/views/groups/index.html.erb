@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+<h1 class="bg-primary w-100 position-fixed top-0 ">CATEGORIES</h1>
+<div id="groups">
+  <% @groups.each do |group| %>
+      <%= render group %>
+    <% end %>
+</div>
+ <div class="bg-green p-3 w-100 position-fixed bottom-0">
+  <%= link_to "Add a New category", new_group_path, class: 'btn bg-green fw-bold col-12 text-uppercase' %>
+</div> 
